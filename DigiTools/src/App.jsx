@@ -1,14 +1,14 @@
 
 import './App.css'
+import Navbar from './components/Navbar/Navbar.jsx';
 
 function App() {
 
 
   return (
     <>
-      <div className='text-amber-500'>
-        <h2>hello world</h2>
-        <button className="btn">Default</button>
+      <div  className="manrope">
+        <Navbar></Navbar>
       </div>
     </>
   )
