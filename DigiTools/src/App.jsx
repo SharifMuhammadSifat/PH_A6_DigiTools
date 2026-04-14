@@ -29,6 +29,20 @@ function App() {
           </div>
           <img src={Banner} alt="Banner" className='shadow-2xl lg:w-200' />
         </div>
+        <div className='px-50 py-15 flex items-center justify-between bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white'>
+          <div className='flex flex-col items-center px-25'>
+            <h1 className='text-[60px] font-extrabold'>50K+</h1>
+            <p className='text-[24px] font-medium'>Active Users</p>
+          </div>
+          <div className='flex flex-col items-center border-x-2 border-[#f6f6f6] w-1/2 px-25'>
+            <h1 className='text-[60px] font-extrabold'>200+</h1>
+            <p className='text-[24px] font-medium'>Premium Tools</p>
+          </div>
+          <div className='flex flex-col items-center px-25'>
+            <h1 className='text-[60px] font-extrabold'>4.9</h1>
+            <p className='text-[24px] font-medium'>Rating</p>
+          </div>
+        </div>
       </div>
     </>
   )
