@@ -16,7 +16,7 @@ function App() {
         <div className='px-50 py-16 flex items-center justify-center'>
           <div>
             <div className='flex items-center bg-[#e1e7ff] p-2.5 gap-1 rounded-full w-fit mb-4'><img className='h-4 w-4' src={Dot} alt="Dot" /> <p className='text-[16px] bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent font-medium'>New: Ai-Powered Tools Available</p></div>
-            <h1 className='lg:text-[72px] text-[60px] font-extrabold text-[#101727]'>Supercharge Your Digital Workflow</h1>
+            <h1 className='lg:text-[72px] text-[60px] font-extrabold text-[#101727]'>Supercharge Your <span className='bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent'>Digital Workflow</span></h1>
             <p className='text-[18px] font-normal text-[#627382] mb-4'>Access premium AI tools, design assets, templates, and productivity<br />
               software—all in one place. Start creating faster today.<br />
               Explore Products
