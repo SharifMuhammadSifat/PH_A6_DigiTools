@@ -13,6 +13,9 @@ const fetchProducts = async () => {
 };
 
 function App() {
+
+  const [cartProducts, setCartProducts] = useState([]);
+
   const productPromise = fetchProducts();
 
 
@@ -52,7 +55,7 @@ function App() {
           </div>
         </div>
           <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
-            <Products productPromise = {productPromise}></Products>
+            <Products productPromise = {productPromise} cartProducts = {cartProducts} setCartProducts = {setCartProducts}></Products>
           </Suspense>
       </div>
     </>
