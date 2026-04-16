@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "VisionCraft AI",
+    "description": "Generate stunning AI images from text prompts with advanced style controls and high-resolution exports.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Unlimited image generation",
+      "4K resolution export",
+      "Custom style presets",
+      "Fast rendering engine"
+    ],
+    "icon": "https://i.ibb.co.com/rK0vFxpD/camera-8775444-1.png"
+  },
+  {
+    "id": 2,
+    "name": "UXFlow Pro",
+    "description": "AI-powered UI/UX design tool that helps you create modern interfaces, wireframes, and prototypes in minutes.",
+    "price": 49,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Auto UI generation",
+      "Design system builder",
+      "Interactive prototyping",
+      "Team collaboration"
+    ],
+    "icon": "https://i.ibb.co.com/gFHMjXLN/design-tool.png"
+  },
+  {
+    "id": 3,
+    "name": "AutoPilot AI",
+    "description": "Automate repetitive tasks using AI workflows, from data entry to email responses and business processes.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Drag-and-drop automation",
+      "AI decision making",
+      "API integrations",
+      "Real-time monitoring"
+    ],
+    "icon": "https://i.ibb.co.com/wFqzGFnp/operation.png"
+  },
+  {
+    "id": 4,
+    "name": "Portify Builder",
+    "description": "Create stunning developer and designer portfolios with AI-generated layouts and content suggestions.",
+    "price": 15,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "AI portfolio generator",
+      "Custom domains",
+      "SEO optimization",
+      "Responsive templates"
+    ],
+    "icon": "https://i.ibb.co.com/YB9HT54k/portfolio.png"
+  },
+  {
+    "id": 5,
+    "name": "SocialGenie AI",
+    "description": "Manage and grow your social media with AI-generated posts, scheduling, and analytics insights.",
+    "price": 25,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Auto content generation",
+      "Post scheduling",
+      "Analytics dashboard",
+      "Multi-platform support"
+    ],
+    "icon": "https://i.ibb.co.com/hRZxyv2C/social-media.png"
+  },
+  {
+    "id": 6,
+    "name": "WriteGenius AI",
+    "description": "An AI writing assistant that helps you create blogs, ads, emails, and scripts effortlessly.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Long-form content writing",
+      "Grammar correction",
+      "SEO optimization",
+      "Multiple writing tones"
+    ],
+    "icon": "https://i.ibb.co.com/m7SjvhW/writing-2327400-1.png"
+  }
+]
