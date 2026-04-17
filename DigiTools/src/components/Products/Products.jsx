@@ -5,7 +5,8 @@ import { ShoppingCart } from "lucide-react";
 import CartItems from '../CartItems/CartItems.jsx';
 
 
-const Products = ({ productPromise, cartProducts, setCartProducts }) => {
+
+const Products = ({ productPromise, cartProducts, setCartProducts, cartTotal, setCartTotal }) => {
     const [selectedBtn, setSelectedBtn] = useState("products");
 
     const toggler = () => {
@@ -16,6 +17,11 @@ const Products = ({ productPromise, cartProducts, setCartProducts }) => {
         }
     };
 
+const checkoutHandler = () => {
+    setCartProducts([]);
+    setCartTotal(0);
+    alert("Thank you for your purchase!"); 
+}
 
     const productData = use(productPromise);
 
@@ -28,15 +34,12 @@ const Products = ({ productPromise, cartProducts, setCartProducts }) => {
             <div className='flex flex-col items-center justify-center w-full'>
                 <div className='flex items-center justify-center shadow-2xl gap-2.5 my-10 w-fit'>
                     <button onClick={toggler} className={`btn border-0 rounded-full ${selectedBtn === "products" ? "bg-linear-to-r from-blue-500 to-purple-600 text-white" : "bg-white text-[#101727]"}`}>Products</button>
-                    <button onClick={toggler} className={`btn border-0 rounded-full ${selectedBtn === "cart" ? "bg-linear-to-r from-blue-500 to-purple-600 text-white" : "bg-white text-[#101727]"}`}>Cart</button>
+                    <button onClick={toggler} className={`btn border-0 rounded-full ${selectedBtn === "cart" ? "bg-linear-to-r from-blue-500 to-purple-600 text-white" : "bg-white text-[#101727]"}`}>Cart <span className={`${cartTotal > 0 ? "block" : "hidden"}`}>({cartTotal})</span></button>
                 </div>
 
                 <div className={`grid grid-cols-1 lg:grid-cols-3 gap-5 ${selectedBtn === "products" ? "block" : "hidden"}`}>
-                    {productData.map(product => <Card key={product.key} product={product} cartProducts={cartProducts} setCartProducts={setCartProducts}></Card>)}
+                    {productData.map(product => <Card key={product.key} product={product} cartProducts={cartProducts} setCartProducts={setCartProducts} cartTotal={cartTotal} setCartTotal={setCartTotal}></Card>)}
                 </div>
-
-
-
             </div>
             <div className={` flex flex-col gap-15 ${selectedBtn === "cart" ? "block" : "hidden"}`}>
                 <p className='text-2xl text-[#101727] font-bold'>Your Cart.</p>
@@ -45,14 +48,17 @@ const Products = ({ productPromise, cartProducts, setCartProducts }) => {
                     <p className='text-[#627382] text-lg font-normal'>Your cart is currently empty.</p>
                 </div>
 
-                <div>
+                <div className='flex flex-col gap-5'>
                     <div className='flex flex-col gap-3'>
-                        {cartProducts.map(product => <CartItems key={product.key} product={product}></CartItems>)}
+                        {cartProducts.map(product => <CartItems key={product.key} product={product} cartProducts={cartProducts} setCartProducts={setCartProducts} cartTotal={cartTotal} setCartTotal={setCartTotal}></CartItems>)}
                     </div>
-                    
+                    <div className='flex justify-between'>
+                        <p className='text-[#627382]'>Total:</p>
+                        <p className='text-[#101727] font-bold'>${cartProducts.reduce((total, item) => total + item.price, 0).toFixed(2)}</p>
+                    </div>
+
+                    <button onClick={checkoutHandler} className='btn bg-linear-to-r from-blue-500 to-purple-600 text-white border-0 rounded-full py-2 px-4 hover:from-blue-600 hover:to-purple-700'>Checkout</button>
                 </div>
-
-
             </div>
         </div>
     );

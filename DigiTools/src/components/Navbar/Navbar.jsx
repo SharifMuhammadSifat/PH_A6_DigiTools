@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../../assets/digitools.png';
 import { FiShoppingCart } from "react-icons/fi";
 
-const Navbar = () => {
+const Navbar = ({ cartTotal }) => {
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm lg:px-50">
@@ -30,8 +30,11 @@ const Navbar = () => {
                         <li>FAQ</li>
                     </ul>
                 </div>
-                <div className="navbar-end flex items-center gap-2">
+                <div className="navbar-end flex items-center gap-2 relative">
                     <FiShoppingCart />
+                    <p className={`absolute top-0 right-37 bg-red-500 text-white text-xs rounded-full h-3.5 w-3.5 flex items-center justify-center ${cartTotal > 0 ? "block" : "hidden"}`}>
+                        {cartTotal}
+                    </p>
                     <p>Login</p>
                     <p className="text-white bg-linear-to-r from-blue-500 to-purple-500 rounded-full px-2.5 py-1">Get Started</p>
                 </div>

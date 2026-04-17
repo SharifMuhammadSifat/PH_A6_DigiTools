@@ -15,6 +15,7 @@ const fetchProducts = async () => {
 function App() {
 
   const [cartProducts, setCartProducts] = useState([]);
+  const [cartTotal, setCartTotal] = useState(0);
 
   const productPromise = fetchProducts();
 
@@ -22,7 +23,7 @@ function App() {
   return (
     <>
       <div className="manrope">
-        <Navbar></Navbar>
+        <Navbar cartTotal={cartTotal}></Navbar>
         <div className='px-50 py-16 flex items-center justify-center'>
           <div>
             <div className='flex items-center bg-[#e1e7ff] p-2.5 gap-1 rounded-full w-fit mb-4'><img className='h-4 w-4' src={Dot} alt="Dot" /> <p className='text-[16px] bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent font-medium'>New: Ai-Powered Tools Available</p></div>
@@ -55,7 +56,7 @@ function App() {
           </div>
         </div>
           <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
-            <Products productPromise = {productPromise} cartProducts = {cartProducts} setCartProducts = {setCartProducts}></Products>
+            <Products productPromise = {productPromise} cartProducts = {cartProducts} setCartProducts = {setCartProducts} cartTotal={cartTotal} setCartTotal={setCartTotal}></Products>
           </Suspense>
       </div>
     </>
