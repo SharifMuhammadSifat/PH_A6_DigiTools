@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Card = ({ product, cartProducts, setCartProducts, cartTotal, setCartTotal }) => {
@@ -20,6 +20,7 @@ const Card = ({ product, cartProducts, setCartProducts, cartTotal, setCartTotal 
             const updatedCart = [...cartProducts, product];
             setCartProducts(updatedCart);
             setCartTotal(cartTotal + 1);
+            toast("Item added to cart!");
         }
     
     };

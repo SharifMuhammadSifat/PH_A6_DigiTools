@@ -1,6 +1,7 @@
 import React from 'react';
 import { use, useState } from 'react';
 import Card from '../Card/Card.jsx';
+import { toast } from 'react-toastify';
 import { ShoppingCart } from "lucide-react";
 import CartItems from '../CartItems/CartItems.jsx';
 
@@ -20,7 +21,7 @@ const Products = ({ productPromise, cartProducts, setCartProducts, cartTotal, se
 const checkoutHandler = () => {
     setCartProducts([]);
     setCartTotal(0);
-    alert("Thank you for your purchase!"); 
+    toast("Thank you for your purchase!")
 }
 
     const productData = use(productPromise);
@@ -48,7 +49,7 @@ const checkoutHandler = () => {
                     <p className='text-[#627382] text-lg font-normal'>Your cart is currently empty.</p>
                 </div>
 
-                <div className='flex flex-col gap-5'>
+                <div className={`flex flex-col gap-5 rounded-4xl border border-[#d8cbcb] shadow-2xl px-15 py-10 ${cartProducts.length > 0 ? "block" : "hidden"}`}>
                     <div className='flex flex-col gap-3'>
                         {cartProducts.map(product => <CartItems key={product.key} product={product} cartProducts={cartProducts} setCartProducts={setCartProducts} cartTotal={cartTotal} setCartTotal={setCartTotal}></CartItems>)}
                     </div>

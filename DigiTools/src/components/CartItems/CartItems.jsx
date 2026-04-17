@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { toast } from 'react-toastify';
 
 
 const CartItems = ({ product, cartProducts, setCartProducts, cartTotal, setCartTotal }) => {
@@ -7,6 +7,7 @@ const CartItems = ({ product, cartProducts, setCartProducts, cartTotal, setCartT
         const updatedCart = cartProducts.filter(item => item.name !== product.name);
         setCartProducts(updatedCart);
         setCartTotal(cartTotal - 1);
+        toast("Item removed from cart!");
     }
     return (
         <>
