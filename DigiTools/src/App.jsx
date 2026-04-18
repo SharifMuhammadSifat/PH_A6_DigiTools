@@ -11,6 +11,9 @@ import { Package } from "lucide-react";
 import { Rocket } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookSquare } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 
 const fetchProducts = async () => {
   let products = await fetch("/products.json");
@@ -257,8 +260,64 @@ tools immediately.</p>
 
             <button className='btn w-full bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white border-0 rounded-full py-2 px-4 hover:from-blue-600 hover:to-purple-700'>Contact Sales</button>
           </div>
-          
+        </div>
+      </div>
 
+      <div className='bg-[#101727] pt-30 pb-7.5 px-50 flex flex-col justify-between gap-20'>
+        <div className='flex h-65 justify-between text-white border border-b-[#627382] border-t-0 border-l-0 border-r-0'>
+          <div className='flex flex-col gap-4'>
+            <h1 className='text-[24px] font-bold'>DigiTools</h1>
+            <p className='text-[16px] font-normal'>Premium digital tools for creators,<br />professionals, and businesses. Work smarter<br />with our suite of powerful tools.</p>
+          </div>
+
+          <div className='flex flex-col gap-3.5'>
+            <h1 className='text-[20px] font-medium'>Product</h1>
+            <p className='text-[16px] font-normal'>Features</p>
+            <p className='text-[16px] font-normal'>Pricing</p>
+            <p className='text-[16px] font-normal'>Templates</p>
+            <p className='text-[16px] font-normal'>Integrations</p>
+          </div>
+
+          <div className='flex flex-col gap-3.5'>
+            <h1 className='text-[20px] font-medium'>Company</h1>
+            <p className='text-[16px] font-normal'>About Us</p>
+            <p className='text-[16px] font-normal'>Careers</p>
+            <p className='text-[16px] font-normal'>Blog</p>
+            <p className='text-[16px] font-normal'>Careers</p>
+            <p className='text-[16px] font-normal'>Press</p>
+          </div>
+
+          <div className='flex flex-col gap-3.5'>
+            <h1 className='text-[20px] font-medium'>Resource</h1>
+            <p className='text-[16px] font-normal'>Documentation</p>
+            <p className='text-[16px] font-normal'>Help Center</p>
+            <p className='text-[16px] font-normal'>Community</p>
+            <p className='text-[16px] font-normal'>Contact</p>
+          </div>
+
+          <div className='flex flex-col gap-3.5'>
+            <h1 className='text-[20px] font-medium'>Social Links</h1>
+            <div className='flex items-center gap-2 text-2xl'>
+                <AiFillInstagram />
+                <FaFacebookSquare />
+                <BsTwitterX />
+
+            </div>
+          </div>
+
+        </div>
+
+        <div className='flex items-center justify-between text-[#627382]'>
+        <div>
+          <p className='text-[#627382] text-[16px]'>
+          © 2024 DigiTools. All rights reserved.
+          </p>
+        </div>
+        <div className='flex gap-5'>
+          <p className='text-[#627382] text-[16px]'>Privacy Policy</p>
+          <p className='text-[#627382] text-[16px]'>Terms of Service</p>
+          <p className='text-[#627382] text-[16px]'>Cookies</p>
+        </div>
         </div>
       </div>
 
