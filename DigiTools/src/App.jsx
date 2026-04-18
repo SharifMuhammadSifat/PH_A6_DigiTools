@@ -9,6 +9,8 @@ import { CiPlay1 } from "react-icons/ci";
 import { User } from "lucide-react";
 import { Package } from "lucide-react";
 import { Rocket } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const fetchProducts = async () => {
   let products = await fetch("/products.json");
@@ -116,10 +118,150 @@ tools immediately.</p>
 
           
         </div>
-
-        
-        
       </div>
+
+      <div className='bg-white flex flex-col items-center justify-center py-30 px-50 gap-20'>
+        
+        <div className='flex flex-col items-center gap-4'>
+          <h1 className='text-[48px] font-extrabold text-[#101727]'>Simple, Transparent Pricing</h1>
+          <p className='text-[16px] font-normal text-[#627382]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+        </div>
+
+
+        <div className='flex gap-10'>
+
+          <div className='bg-[#f9fafc] rounded-2xl shadow-2xl p-6 w-95 h-auto'>
+            <div className='flex flex-col gap-6'>
+              <div>
+                <h2 className='text-[24px] font-bold text-[#101727]'>Starter</h2>
+                <p className='text-[16px] font-normal text-[#627382]'>Perfect for getting started</p>
+              </div>
+              <div>
+                <p className='text-[40px] font-bold text-black'>$0<span className='text-[20px] font-normal text-[#627382]'>/Month</span></p>
+              </div>
+              
+
+              <div className='h-40'>
+                <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(30, 232, 50)" }}
+                  /> Access to 10 free tools</p>
+                <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(30, 232, 50)" }}
+                  /> Basic templates</p>
+                <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(30, 232, 50)" }}
+                  /> Community support</p>
+                <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(30, 232, 50)" }}
+                  /> 1 project per month</p>
+              </div>
+
+
+            </div>
+
+            <button className='btn w-full bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white border-0 rounded-full py-2 px-4 hover:from-blue-600 hover:to-purple-700'>Choose Plan</button>
+          </div>
+
+          <div className='bg-[#f9fafc] rounded-2xl shadow-2xl p-6 w-95 h-auto bg-linear-to-r from-[#4f39f6] to-[#9514fa]'>
+            <div className='flex flex-col gap-6'>
+              <div>
+                <h2 className='text-[24px] font-bold text-white'>Pro</h2>
+                <p className='text-[16px] font-normal text-white'>Perfect for getting started</p>
+              </div>
+              <div>
+                <p className='text-[40px] font-bold text-white'>$29<span className='text-[20px] font-normal text-white'>/Month</span></p>
+              </div>
+              
+
+              <div className='h-40'>
+                <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(255, 255, 255)" }}
+                  /> Access to all premium tools</p>
+                <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(255, 255, 255)" }}
+                  /> Unlimited templates</p>
+                <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(255, 255, 255)" }}
+                  /> Priority support</p>
+                <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(255, 255, 255)" }}
+                  /> Unlimited projects</p>
+
+                <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(255, 255, 255)" }}
+                  /> Cloud sync</p>
+
+                <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(255, 255, 255)" }}
+                  /> Advanced analytics</p>
+              </div>
+
+
+            </div>
+
+            <button className='btn w-full bg-white text-black border-0 rounded-full py-2 px-4 '><span className='bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent'>Start Pro Trial</span></button>
+          </div>
+
+
+
+          <div className='bg-[#f9fafc] rounded-2xl shadow-2xl p-6 w-95 h-auto'>
+            <div className='flex flex-col gap-6'>
+              <div>
+                <h2 className='text-[24px] font-bold text-[#101727]'>Enterprise</h2>
+                <p className='text-[16px] font-normal text-[#627382]'>For teams and businesses</p>
+              </div>
+              <div>
+                <p className='text-[40px] font-bold text-black'>$99<span className='text-[20px] font-normal text-[#627382]'>/Month</span></p>
+              </div>
+              
+
+              <div className='h-40'>
+                <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(30, 232, 50)" }}
+                  /> Everything in Pro</p>
+                <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(30, 232, 50)" }}
+                  /> Team collaboration</p>
+                <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(30, 232, 50)" }}
+                  /> Custom integrations</p>
+                <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(30, 232, 50)" }}
+                  /> Dedicated support</p>
+                <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(30, 232, 50)" }}
+                  /> SLA guarantee</p>
+                <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
+                      icon={faCheck}
+                      style={{ color: "rgb(30, 232, 50)" }}
+                  /> Custom branding</p>
+              </div>
+
+
+            </div>
+
+            <button className='btn w-full bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white border-0 rounded-full py-2 px-4 hover:from-blue-600 hover:to-purple-700'>Contact Sales</button>
+          </div>
+          
+
+        </div>
+      </div>
+
     </>
   )
 }
