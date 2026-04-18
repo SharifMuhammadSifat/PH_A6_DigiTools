@@ -39,7 +39,7 @@ const checkoutHandler = () => {
                 </div>
 
                 <div className={`grid grid-cols-1 lg:grid-cols-3 gap-5 ${selectedBtn === "products" ? "block" : "hidden"}`}>
-                    {productData.map(product => <Card key={product.key} product={product} cartProducts={cartProducts} setCartProducts={setCartProducts} cartTotal={cartTotal} setCartTotal={setCartTotal}></Card>)}
+                    {productData.map((product, index) => <Card key={index} product={product} cartProducts={cartProducts} setCartProducts={setCartProducts} cartTotal={cartTotal} setCartTotal={setCartTotal}></Card>)}
                 </div>
             </div>
             <div className={` flex flex-col gap-15 ${selectedBtn === "cart" ? "block" : "hidden"}`}>
