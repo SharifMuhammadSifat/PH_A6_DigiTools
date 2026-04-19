@@ -82,7 +82,7 @@ function App() {
           <p className='text-[16px] font-normal text-[#627382]'>Start using premium digital tools in minutes, not hours.</p>
         </div>
 
-        <div className='flex items-center justify-center gap-10'>
+        <div className='flex flex-col items-center justify-center gap-10 md:flex-row'>
 
           <div className='flex flex-col items-center justify-center gap-5 bg-white rounded-4xl shadow-2xl px-15 py-10 w-95 h-95 text-center relative'>
             <div className='bg-purple-200 w-25 h-25 flex items-center justify-center rounded-full'>
@@ -123,7 +123,7 @@ function App() {
         </div>
       </div>
 
-      <div className='bg-white flex flex-col items-center justify-center py-30 px-50 gap-20'>
+      <div className='bg-white flex flex-col items-center justify-center py-30 px-50 gap-20 relative'>
 
         <div className='flex flex-col items-center gap-4'>
           <h1 className='text-[48px] font-extrabold text-[#101727]'>Simple, Transparent Pricing</h1>
@@ -131,7 +131,8 @@ function App() {
         </div>
 
 
-        <div className='flex gap-10'>
+        <div className='flex gap-10 md:flex-row flex-col items-center justify-center'>
+          <div className='bg-[#fef3c6] text-[#bb4d00] px-3 py-1 rounded-full absolute md:top-73 top-230 left-1/2 transform -translate-x-1/2 '>Most Popular</div>
 
           <div className='bg-[#f9fafc] rounded-2xl shadow-2xl p-6 w-95 h-auto'>
             <div className='flex flex-col gap-6'>
@@ -173,7 +174,7 @@ function App() {
             <div className='flex flex-col gap-6'>
               <div>
                 <h2 className='text-[24px] font-bold text-white'>Pro</h2>
-                <p className='text-[16px] font-normal text-white'>Perfect for getting started</p>
+                <p className='text-[16px] font-normal text-white'>Best for professionals</p>
               </div>
               <div>
                 <p className='text-[40px] font-bold text-white'>$29<span className='text-[20px] font-normal text-white'>/Month</span></p>
