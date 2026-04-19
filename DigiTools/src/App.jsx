@@ -29,7 +29,7 @@ function App() {
 
 
   return (
-    <>
+    <div  className="manrope">
       <svg width="0" height="0">
         <defs>
           <linearGradient id="userGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -38,7 +38,7 @@ function App() {
           </linearGradient>
         </defs>
       </svg>
-      <div className="manrope">
+      <div>
         <Navbar cartTotal={cartTotal}></Navbar>
         <div className='px-50 py-16 flex items-center justify-center'>
           <div>
@@ -71,9 +71,9 @@ function App() {
             <p className='text-[24px] font-medium'>Rating</p>
           </div>
         </div>
-          <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
-            <Products productPromise = {productPromise} cartProducts = {cartProducts} setCartProducts = {setCartProducts} cartTotal={cartTotal} setCartTotal={setCartTotal}></Products>
-          </Suspense>
+        <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
+          <Products productPromise={productPromise} cartProducts={cartProducts} setCartProducts={setCartProducts} cartTotal={cartTotal} setCartTotal={setCartTotal}></Products>
+        </Suspense>
       </div>
 
       <div className='bg-[#f9fafc] flex flex-col items-center justify-center py-30 px-50 gap-20'>
@@ -101,7 +101,7 @@ function App() {
             </div>
             <h2 className='text-[24px] font-bold text-[#101727]'>Choose Products</h2>
             <p className='text-[16px] font-normal text-[#627382]'>Browse our catalog and select the tools
-that fit your needs.</p>
+              that fit your needs.</p>
             <div className='bg-linear-to-r from-[#4f39f6] to-[#9514fa] w-10 h-10 rounded-full flex items-center justify-center absolute right-5 top-3 text-white font-bold text-md'>
               <p>02</p>
             </div>
@@ -112,19 +112,19 @@ that fit your needs.</p>
               <Rocket stroke="url(#userGrad)" size={60} />
             </div>
             <h2 className='text-[24px] font-bold text-[#101727]'>Start Creating</h2>
-            <p className='text-[16px] font-normal text-[#627382]'>Download and start using your premium 
-tools immediately.</p>
+            <p className='text-[16px] font-normal text-[#627382]'>Download and start using your premium
+              tools immediately.</p>
             <div className='bg-linear-to-r from-[#4f39f6] to-[#9514fa] w-10 h-10 rounded-full flex items-center justify-center absolute right-5 top-3 text-white font-bold text-md'>
               <p>03</p>
             </div>
           </div>
 
-          
+
         </div>
       </div>
 
       <div className='bg-white flex flex-col items-center justify-center py-30 px-50 gap-20'>
-        
+
         <div className='flex flex-col items-center gap-4'>
           <h1 className='text-[48px] font-extrabold text-[#101727]'>Simple, Transparent Pricing</h1>
           <p className='text-[16px] font-normal text-[#627382]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
@@ -142,25 +142,25 @@ tools immediately.</p>
               <div>
                 <p className='text-[40px] font-bold text-black'>$0<span className='text-[20px] font-normal text-[#627382]'>/Month</span></p>
               </div>
-              
+
 
               <div className='h-40'>
                 <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(30, 232, 50)" }}
-                  /> Access to 10 free tools</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(30, 232, 50)" }}
+                /> Access to 10 free tools</p>
                 <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(30, 232, 50)" }}
-                  /> Basic templates</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(30, 232, 50)" }}
+                /> Basic templates</p>
                 <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(30, 232, 50)" }}
-                  /> Community support</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(30, 232, 50)" }}
+                /> Community support</p>
                 <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(30, 232, 50)" }}
-                  /> 1 project per month</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(30, 232, 50)" }}
+                /> 1 project per month</p>
               </div>
 
 
@@ -178,35 +178,35 @@ tools immediately.</p>
               <div>
                 <p className='text-[40px] font-bold text-white'>$29<span className='text-[20px] font-normal text-white'>/Month</span></p>
               </div>
-              
+
 
               <div className='h-40'>
                 <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(255, 255, 255)" }}
-                  /> Access to all premium tools</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(255, 255, 255)" }}
+                /> Access to all premium tools</p>
                 <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(255, 255, 255)" }}
-                  /> Unlimited templates</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(255, 255, 255)" }}
+                /> Unlimited templates</p>
                 <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(255, 255, 255)" }}
-                  /> Priority support</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(255, 255, 255)" }}
+                /> Priority support</p>
                 <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(255, 255, 255)" }}
-                  /> Unlimited projects</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(255, 255, 255)" }}
+                /> Unlimited projects</p>
 
                 <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(255, 255, 255)" }}
-                  /> Cloud sync</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(255, 255, 255)" }}
+                /> Cloud sync</p>
 
                 <p className='text-[16px] font-medium text-white'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(255, 255, 255)" }}
-                  /> Advanced analytics</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(255, 255, 255)" }}
+                /> Advanced analytics</p>
               </div>
 
 
@@ -226,33 +226,33 @@ tools immediately.</p>
               <div>
                 <p className='text-[40px] font-bold text-black'>$99<span className='text-[20px] font-normal text-[#627382]'>/Month</span></p>
               </div>
-              
+
 
               <div className='h-40'>
                 <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(30, 232, 50)" }}
-                  /> Everything in Pro</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(30, 232, 50)" }}
+                /> Everything in Pro</p>
                 <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(30, 232, 50)" }}
-                  /> Team collaboration</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(30, 232, 50)" }}
+                /> Team collaboration</p>
                 <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(30, 232, 50)" }}
-                  /> Custom integrations</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(30, 232, 50)" }}
+                /> Custom integrations</p>
                 <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(30, 232, 50)" }}
-                  /> Dedicated support</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(30, 232, 50)" }}
+                /> Dedicated support</p>
                 <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(30, 232, 50)" }}
-                  /> SLA guarantee</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(30, 232, 50)" }}
+                /> SLA guarantee</p>
                 <p className='text-[16px] font-medium text-[#627382]'><FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ color: "rgb(30, 232, 50)" }}
-                  /> Custom branding</p>
+                  icon={faCheck}
+                  style={{ color: "rgb(30, 232, 50)" }}
+                /> Custom branding</p>
               </div>
 
 
@@ -298,9 +298,9 @@ tools immediately.</p>
           <div className='flex flex-col gap-3.5'>
             <h1 className='text-[20px] font-medium'>Social Links</h1>
             <div className='flex items-center gap-2 text-2xl'>
-                <AiFillInstagram />
-                <FaFacebookSquare />
-                <BsTwitterX />
+              <AiFillInstagram />
+              <FaFacebookSquare />
+              <BsTwitterX />
 
             </div>
           </div>
@@ -308,20 +308,20 @@ tools immediately.</p>
         </div>
 
         <div className='flex items-center justify-between text-[#627382]'>
-        <div>
-          <p className='text-[#627382] text-[16px]'>
-          © 2024 DigiTools. All rights reserved.
-          </p>
-        </div>
-        <div className='flex gap-5'>
-          <p className='text-[#627382] text-[16px]'>Privacy Policy</p>
-          <p className='text-[#627382] text-[16px]'>Terms of Service</p>
-          <p className='text-[#627382] text-[16px]'>Cookies</p>
-        </div>
+          <div>
+            <p className='text-[#627382] text-[16px]'>
+              © 2024 DigiTools. All rights reserved.
+            </p>
+          </div>
+          <div className='flex gap-5'>
+            <p className='text-[#627382] text-[16px]'>Privacy Policy</p>
+            <p className='text-[#627382] text-[16px]'>Terms of Service</p>
+            <p className='text-[#627382] text-[16px]'>Cookies</p>
+          </div>
         </div>
       </div>
 
-    </>
+    </div>
   )
 }
 
